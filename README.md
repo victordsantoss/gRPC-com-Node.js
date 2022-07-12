@@ -11,6 +11,7 @@ Experimentar o uso do Framework [GRPC](hOps://grpc.io) junto ao [ProfoBuf](hOps:
 
 ### gRPC
 
+O gRPC é um framework que utiliza e facilita a utilização do RPC, este que é um protocolo de comunicação que permite a chamada de função remota entre diferentes hosts (podendo ser no mesmo host). Além de facilitar a utlização do RPC, o gRPC suporta várias linguagens dentre as mais utilizadas do mundo como python e nodejs.
 
 Nesse contexto, um ponto de grande impacto é o ganho de performance ao trafegar um payload extensivo, visto que, no gRPC a comunicação é feita em binário, o que traz uma melhora enorme na performance, que pode ser até 7 vezes mais rápida na resposta de dados e 10 vezes no envio. Isso se deve principalmente ao empacotamento compacto dos proto buffers e ao uso de HTTP/2 pelo gRPC.
 
@@ -23,7 +24,6 @@ Com isso, você tem algumas vantagens na sua arquitetura de microsserviços, com
 
 Em resumo, é como se você declarasse funções e classes em um back-end e pudesse acessá-los no front-end graças ao arquivo de contrato que contém suas interfaces (serviços e DTOs). 
 
-Fonte [Zup](https://www.zup.com.br/blog/grpc-o-que-e-beagle).
 
 #### GRPC x API REST
 
@@ -45,9 +45,14 @@ HTTP2 apesar de manter muitas das interfaces antigas do protocolo, conseguiu ino
 
 ### ProtoBuf 
 
+o Protocol Buffer (ProtoBuf) é um mecanismo extensível para a serialização de dados estruturados. É semlehante aos JSON e a ao XML, mas possui algumas vantagens em relação a esses, como ser mais rápido e menor. Essas vantagens tornam esse protocolo de estruturação de dados mais adequado para o uso dentro do gRPC, necessitando de menos rede e recursos computacionais para a sua manipulação e envio pela rede. 
 
+Outros recursos importantes são:
+- Neutralidade na escola da plataforma, linguagem...
+- Consumo de pouco espaço.
 
 ## Solução Apresentada
+
 ### Dependencias
 
 * [GRPC](hOps://grpc.io)
@@ -87,3 +92,5 @@ docker-compose up
 
 [Site oficial do gRPC](https://grpc.io/)
 [O guia completo do gRPC parte 1: O que é gRPC?](https://blog.lsantos.dev/guia-grpc-1/)
+[Zup](https://www.zup.com.br/blog/grpc-o-que-e-beagle)
+[protocol-buffers](https://developers.google.com/protocol-buffers)
