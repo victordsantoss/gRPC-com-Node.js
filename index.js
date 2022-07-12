@@ -1,7 +1,7 @@
 const grpc = require('grpc');
 const elementsProto = grpc.load('elements.proto');
 const generateFakeDB = require('./utils/fakeDB');
-const port = 5051;
+const local_server = require('./utils/global_constants');
 
 const server = new grpc.Server();
 server.addService(elementsProto.ElementService.service, {
@@ -12,7 +12,7 @@ server.addService(elementsProto.ElementService.service, {
     }
 });
 
-server.bind(`127.0.0.1:${port}`, grpc.ServerCredentials.createInsecure());
+server.bind(local_server, grpc.ServerCredentials.createInsecure());
 
-console.log(`Server running at http://127.0.0.1:${port}`);
+console.log(`Server running at ${local_server}`);
 server.start();
