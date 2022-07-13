@@ -92,7 +92,7 @@ docker-compose up
 
 ## Referências
 
-[Site oficial do gRPC](https://grpc.io/)
-[O guia completo do gRPC parte 1: O que é gRPC?](https://blog.lsantos.dev/guia-grpc-1/)
-[Zup](https://www.zup.com.br/blog/grpc-o-que-e-beagle)
-[protocol-buffers](https://developers.google.com/protocol-buffers)
+* [Site oficial do gRPC](https://grpc.io/)
+* [O guia completo do gRPC parte 1: O que é gRPC?](https://blog.lsantos.dev/guia-grpc-1/)
+* [Zup](https://www.zup.com.br/blog/grpc-o-que-e-beagle)
+* [protocol-buffers](https://developers.google.com/protocol-buffers)
