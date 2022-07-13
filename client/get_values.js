@@ -1,10 +1,12 @@
 const client = require('./client-grpc');
-const handleMaxAndMin = require('../utils/values');
+const generateFakeDB = require('../utils/fakeDB');
 
-client.list({}, (error, array) => {
-    if (error) throw error;
-    const [max, min] = handleMaxAndMin(array.elements);
-    console.log(max, min);
-    console.log(`Valor Máximo: ${max.number}`);
-    console.log(`Valor Mínimo: ${min.number}`);
+const elementList = generateFakeDB();
+
+client.list(elementList, 
+    (error, response) => {
+        if (error) throw error;
+        const {min, max} = response;
+        console.log(`Valor Máximo: ${max}`);
+        console.log(`Valor Mínimo: ${min}`);
 });

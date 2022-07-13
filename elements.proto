@@ -1,15 +1,20 @@
 syntax = "proto3";
 
 service ElementService {
-   rpc List (Empty) returns (ElementList) {}
+   rpc List (ElementList) returns (MinMax) {}
 }
 
-message Empty {}
 
 message Element {
    int32 id = 1;
    double number = 2;
 }
+
+message MinMax {
+   double min = 1;
+   double max = 2;
+}
+
 message ElementList {
    repeated Element elements = 1;
 }  

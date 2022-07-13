@@ -2,13 +2,16 @@ const grpc = require('grpc');
 const elementsProto = grpc.load('elements.proto');
 const generateFakeDB = require('./utils/fakeDB');
 const local_server = require('./utils/global_constants');
+const handleMaxAndMin = require('./utils/values');
 
 const server = new grpc.Server();
 server.addService(elementsProto.ElementService.service, {
-    List: (_, callback) => {
-        const fakeDB = generateFakeDB();
-        console.log('FAKE DB: ', fakeDB);
-        callback(null, fakeDB);
+    List: (array, callback) => {
+        console.log('FAKE DB: ', array.request.elements);
+        const [minNumber, maxNumber] = handleMaxAndMin(array.request.elements);
+        console.log(`Valor Máximo: ${maxNumber}`);
+        console.log(`Valor Mínimo: ${minNumber}`);
+        callback(null, {min: minNumber, max: maxNumber});
     }
 });
 

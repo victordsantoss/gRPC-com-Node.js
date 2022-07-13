@@ -5,7 +5,7 @@ const handleMaxAndMin = (array) => {
     const min = array.reduce(function (prev, current) {
         return (prev.number < current.number) ? prev : current;
     });
-    return [max, min];
+    return [max.number, min.number];
 }
 
 module.exports = handleMaxAndMin;

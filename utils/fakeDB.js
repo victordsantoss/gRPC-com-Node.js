@@ -5,7 +5,7 @@ const getRandomArbitrary = (min, max) => {
 };
 
 const generateFakeDB = () => {
-    for (let index = 0; index < 10000; index++) {
+    for (let index = 0; index < 100; index++) {
         fakeValues.push({ id: index, number: getRandomArbitrary() })
     };
     return fakeValues;

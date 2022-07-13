@@ -31,17 +31,19 @@ O que mais diverge do REST – o protocolo de comunicação mais comum em arquit
 
 Além disso, existe um conjunto de erros que são mais diretamente aplicáveis ​​a casos de uso de API do que os códigos de status HTTP convencionalmente utilizados no REST.
 
-### Protocolo Http/2
-HTTP2 é uma versão nova do protocolo HTTP/1.1 que é usado pela internet amplamente para servidores e sites. Ele permite a conversa padronizada entre cliente, em geral os navegadores, e servidor, que é onde fica armazenado o conteúdo enviado quando um site é acessado.
-
-HTTP2 apesar de manter muitas das interfaces antigas do protocolo, conseguiu inovar bastante em relação a HTTP/1.1 permitindo que aplicações utilizem métodos como multiplexing em TCP para realizar diversas requisições. O novo protocolo também aproveita opções como a priorização de requisições e compressão de cabeçalho entre outras opções.
-
 <div style="display: flex; justify-content: center; text-align: center">
 <img src="assets/grpc_x_rest.png" width="500">
 </div>
 <div style="display: flex; justify-content: center; text-align: center">
 <p>Fonte: <a href="https://www.zup.com.br/blog/grpc-o-que-e-beagle">ZUP</a></p>
 </div>
+
+### Protocolo Http/2
+
+HTTP2 é uma versão nova do protocolo HTTP/1.1 que é usado pela internet amplamente para servidores e sites. Ele permite a conversa padronizada entre cliente, em geral os navegadores, e servidor, que é onde fica armazenado o conteúdo enviado quando um site é acessado.
+
+HTTP2 apesar de manter muitas das interfaces antigas do protocolo, conseguiu inovar bastante em relação a HTTP/1.1 permitindo que aplicações utilizem métodos como multiplexing em TCP para realizar diversas requisições. O novo protocolo também aproveita opções como a priorização de requisições e compressão de cabeçalho entre outras opções.
+
 
 ### ProtoBuf 
 
