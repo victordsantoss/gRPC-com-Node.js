@@ -1,7 +1,7 @@
 const {vector_size} = require('../utils/global_constants');
 
 const getRandomArbitrary = () => {
-    return Number((Math.random() * (1000000 - 0) + 0).toFixed(4));
+    return Number((Math.random() * (10000000 - 0) + 0).toFixed(4));
 };
 
 const generateFakeDB = () => {

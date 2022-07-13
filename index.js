@@ -1,11 +1,13 @@
 const grpc = require('grpc');
 const elementsProto = grpc.load('elements.proto');
-const generateFakeDB = require('./utils/fakeDB');
 const {local_server} = require('./utils/global_constants');
 const handleMaxAndMin = require('./utils/values');
 
+const server = new grpc.Server({
+    "grpc.max_receive_message_length": 1024 * 1024 * 100,
+    "grpc.max_send_message_length": 1024 * 1024 * 100
+});
 
-const server = new grpc.Server();
 server.addService(elementsProto.ElementService.service, {
     List: (array, callback) => {
         console.log('FAKE DB: ', array.request.elements);
