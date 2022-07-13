@@ -1,11 +1,12 @@
-let fakeValues = [];
+const {vector_size} = require('../utils/global_constants');
 
-const getRandomArbitrary = (min, max) => {
+const getRandomArbitrary = () => {
     return Number((Math.random() * (1000000 - 0) + 0).toFixed(4));
 };
 
 const generateFakeDB = () => {
-    for (let index = 0; index < 100; index++) {
+    let fakeValues = [];
+    for (let index = 0; index < vector_size; index++) {
         fakeValues.push({ id: index, number: getRandomArbitrary() })
     };
     return fakeValues;

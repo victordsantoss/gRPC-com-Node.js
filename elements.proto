@@ -4,7 +4,6 @@ service ElementService {
    rpc List (ElementList) returns (MinMax) {}
 }
 
-
 message Element {
    int32 id = 1;
    double number = 2;
